@@ -10,5 +10,25 @@ cryptogen generate --config ./new-crypto-config.yaml
 
 3. Validate that the crypto material was created for the organizations by going into the generated crypto-config DIRECTORY and then navigate to peerOrganizations.  Explore the various directories
 
+4.  Extend your organization by adding a new peer.  Do this by creating a NEW yaml file with ony the new peer information that you are adding.  
+
+# Extends the crypto material for the setup
+# Adds a new peer for Org1
+
+#### Peers for acme
+PeerOrgs:
+  # Peer configuration for ACME
+  - Name: Org1
+    Domain: acme.com
+    Specs:
+      - Hostname: devpeer2
+        CommonName: devpeer2
+        
+5.  Create the crypto for the new peer with:
+
+cryptogen extend --help
+
+cryptogen extend --config ./extend-crypto-config.yaml     (or whatever you named your file)
+
 
 <!-- Docs to Markdown version 1.0β17 -->
