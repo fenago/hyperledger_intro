@@ -1,6 +1,6 @@
 In this exercise you will learn how to setup the cryptogen config yaml file
 
-1.  Take the existing crypto-config.yaml file and copy it (name it new-crypto-config.yaml) and extend it to create the crypto for a new Organization.  Name the organization something unique (Not budget.com).  Use the existing Org as a template.
+1.  Take the existing crypto-config.yaml file (~/HLF*/cryptogen/simple-two-org) and copy it (name it new-crypto-config.yaml) and then extend it to create the crypto for a new Organization.  Name the organization something unique (Not budget.com).  Use the existing Org as a template.
 
 2.  Generate the crypto material by calling:
 
