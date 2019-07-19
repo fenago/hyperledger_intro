@@ -17,8 +17,15 @@ Name the channel whatever you like and make sure to add both Orgs to the channel
 
 5.  Go into configtx/simple-two-org and create or modify configtx.yaml to create a channel with the multiple organizations so that you generate
 
-- genesis.block
+(SAMPLE VALUES SUBMITTED BELOw - REFERENCE YOUR yaml FILE FOR ACTUAL VALUES)
+`- genesis.block
+configtxgen -outputBlock ./my-genesis.block -profile MyProfile -channelID myordererchannel
+configtxgen -inspectBlock ./my-genesis.block
 - channel.tx
+configtxgen -outputCreateChannelTx my-channel.tx -profile MyProfile -channelID myordererchannel
+configtxgen -inspectChannelCreateTx my-channel.tx
 - org1Anchor.tx
-
+configtxgen -outputAnchorPeersUpdate Org1Anchors.tx -profile MyProfile -channelID myordererchannel -asOrg Org1
+configtxgen -printOrg Org1 > Org1.json
+`
 
